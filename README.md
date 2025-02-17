@@ -149,6 +149,6 @@ Histograms were plotted for each subject to show the distribution of student mar
 - Core subjects like **Physics, Algebra, Chemistry, and Analysis** play a crucial role in overall academic success.  
 - **Language subjects (English, French) are strongly linked,** indicating shared learning skills.  
 - **Technical Drawing and General Economics** seem to be more independent from the other subjects and overall performance.  
-- Physics tends to be the most linearly correlated subject with the S1 average which highlights the fact that students with high understanding of physics can perform better in general
+- Physics tends to be the most linearly correlated subject with the S1 average which highlights the fact that students with high understanding of physics can perform better in general.
 This analysis helps identify key subjects that impact academic success and could guide study prioritization.
 
