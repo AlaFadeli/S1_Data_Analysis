@@ -60,8 +60,49 @@ The correlation matrix was computed using the Pearson correlation coefficient to
 ### 3. Correlation Heatmap
 A heatmap was generated to visually represent the correlation matrix. Strong correlations are represented by darker colors, while weak correlations are lighter.
 
+![Correlation Matrix](correlation_matrix.png)
+
 ### 4. Distribution of Marks  
 Histograms were plotted for each subject to show the distribution of student marks. These visualizations help us understand the frequency of certain ranges of grades and identify trends in student performance.
+
+- **Analysis 1 Distribution:**
+![Analysis 1 Distribution](analysis_1_distribution_modern.png)
+
+- **Algebra 1 Distribution:**
+![Algebra 1 Distribution](algebra_1_distribution_modern.png)
+
+- **Probability 1 Distribution:**
+![Probability 1 Distribution](probability_1_distribution_modern.png)
+
+- **Physics 1 Distribution:**
+![Physics 1 Distribution](physics_1_distribution_modern.png)
+
+- **Chemistry 1 Distribution:**
+![Chemistry 1 Distribution](chemistry_1_distribution_modern.png)
+
+- **Computer Science 1 Distribution:**
+![Computer Science 1 Distribution](computer_science_1_distribution_modern.png)
+
+- **Technical Drawing Distribution:**
+![Technical Drawing Distribution](technical_drawing_distribution_modern.png)
+
+- **Human Engineering 1 Distribution:**
+![Human Engineering 1 Distribution](human_engineering_1_distribution_modern.png)
+
+- **General Economics Distribution:**
+![General Economics Distribution](general_economics_distribution_modern.png)
+
+- **English 1 Distribution:**
+![English 1 Distribution](english_1_distribution_modern.png)
+
+- **French 1 Distribution:**
+![French 1 Distribution](french_1_distribution_modern.png)
+
+- **S1 Total Distribution:**
+![S1 Total Distribution](s1_total_distribution_modern.png)
+
+- **S1 General Average Distribution:**
+![S1 General Average Distribution](s1_general_average_distribution_modern.png)
 
 ---
 
