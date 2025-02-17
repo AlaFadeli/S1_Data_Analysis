@@ -3,7 +3,9 @@
 
 ## Project Overview
 
-This project analyzes the academic performance of first-year engineering students. The dataset includes grades for several subjects and aims to identify trends, correlations, and provide valuable insights to improve the students' academic outcomes.
+This small project analyzes the academic performance of first-year enp students. The dataset includes grades for several subjects and aims to identify trends, correlations, and provide valuable insights to improve the students' academic outcomes.
+
+Data was given in pdf format, therefore it was necessary to convert it to a format that python modules can read and execute on(csv)...During this process there was data loss, I minimized its impact by replacing the empty values with the mean calculated from available values. though, the data loss wasn't huge compared to the available data size.
 
 ### Objective:
 - Analyze student performance data.
@@ -113,7 +115,7 @@ Histograms were plotted for each subject to show the distribution of student mar
   This high correlation suggests that students who perform well in Analysis 1 tend to perform well in Algebra 1. This is expected since both subjects involve mathematical reasoning and problem-solving.  
 
 - **Physics 1 and Chemistry 1 (0.81):**  
-  A strong relationship here indicates that students who excel in one science subject tend to do well in the other. This could be due to overlapping concepts, such as thermodynamics and atomic structure.  
+  A strong relationship here indicates that students who excel in one science subject tend to do well in the other. This could be due to overlapping concepts, such as atomic structure and quantum physics.  
 
 - **Algebra 1 and Physics 1 (0.77):**  
   Algebra is essential for solving physics problems, explaining why strong algebra skills correlate with better performance in Physics 1.  
@@ -147,6 +149,6 @@ Histograms were plotted for each subject to show the distribution of student mar
 - Core subjects like **Physics, Algebra, Chemistry, and Analysis** play a crucial role in overall academic success.  
 - **Language subjects (English, French) are strongly linked,** indicating shared learning skills.  
 - **Technical Drawing and General Economics** seem to be more independent from the other subjects and overall performance.  
-
+- Physics tends to be the most linearly correlated subject with the S1 average which highlights the fact that students with high understanding of physics can perform better in general
 This analysis helps identify key subjects that impact academic success and could guide study prioritization.
 
