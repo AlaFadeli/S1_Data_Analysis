@@ -44,50 +44,46 @@ df.rename(columns=column_name_mapping, inplace=True)
 
 
 
-sns.set_theme(style="whitegrid", palette="muted")
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+sns.set_theme(style="white", palette="muted")
 
 subjects = ['Analysis 1', 'Algebra 1', 'Probability 1', 'Physics 1', 'Chemistry 1', 
             'Computer Science 1', 'Technical Drawing', 'Human Engineering 1', 
             'General Economics', 'English 1', 'French 1', 'S1 Total', 'S1 General Average']
 
 for subject in subjects:
-    if subject in df.columns:  # Check if subject exists in the columns
-        plt.figure(figsize=(10, 6))  # Adjust the size of the plot for better clarity
-        sns.histplot(df[subject], kde=True, color="royalblue", bins=15, stat="density", linewidth=1.5)
+    if subject in df.columns:
+        plt.figure(figsize=(12, 6))
+        sns.histplot(df[subject], kde=True, color="dodgerblue", bins=20, stat="density", 
+                     linewidth=1.7, edgecolor='black', alpha=0.8)
         
-        # Adding titles and labels with larger font sizes
-        plt.title(f'Distribution of {subject} Grades', fontsize=16, fontweight='bold')
+        mean_val = df[subject].mean()
+        median_val = df[subject].median()
+        
+        plt.axvline(mean_val, color="orange", linestyle="--", label=f'Mean: {mean_val:.2f}')
+        plt.axvline(median_val, color="green", linestyle="--", label=f'Median: {median_val:.2f}')
+        
+        plt.title(f'Distribution of {subject} Grades', fontsize=18, fontweight='bold', color="darkslategray")
         plt.xlabel('Grade', fontsize=14)
         plt.ylabel('Density', fontsize=14)
         
-        plt.grid(True, linestyle='--', alpha=0.7)
+        plt.grid(True, linestyle='--', alpha=0.3)
         
         plt.xticks(fontsize=12)
         plt.yticks(fontsize=12)
         
-        plt.tight_layout()  # Adjust layout for better fit
-        plt.savefig(f"{subject.replace(' ', '_')}_distribution.png")
+        plt.legend(title='Statistics', loc='upper right', fontsize=12, title_fontsize=14, frameon=False)
+        
+        plt.tight_layout()
+        
+        plt.savefig(f"{subject.replace(' ', '_').lower()}_distribution_modern.png")
+        plt.show()
     else:
         print(f"Warning: '{subject}' is not a valid column in the DataFrame.")
-
-correlation_matrix = df.corr()
-
-plt.figure(figsize=(12, 8))
-
-sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap="coolwarm", center=0, linewidths=0.5, vmin=-1, vmax=1)
-
-plt.title('Correlation Matrix of Subject Grades', fontsize=16, fontweight='bold')
-plt.xticks(fontsize=12)
-plt.yticks(fontsize=12)
-
-
-plt.tight_layout()
-plt.savefig("correlation_matrix.png")
-
-
-correlation_matrix = df.corr()
-
-plt.figure(figsize=(14, 10))
 
 sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap="RdYlBu_r", center=0, 
             linewidths=0.8, linecolor='white', vmin=-1, vmax=1, 
