@@ -44,10 +44,6 @@ df.rename(columns=column_name_mapping, inplace=True)
 
 
 
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
 
 sns.set_theme(style="white", palette="muted")
 
@@ -81,7 +77,7 @@ for subject in subjects:
         plt.tight_layout()
         
         plt.savefig(f"{subject.replace(' ', '_').lower()}_distribution_modern.png")
-        plt.show()
+#        plt.show()
     else:
         print(f"Warning: '{subject}' is not a valid column in the DataFrame.")
 
@@ -95,5 +91,26 @@ plt.yticks(fontsize=14, rotation=0)
 
 plt.tight_layout()
 
+#plt.show()
+
+plt.figure(figsize=(10, 6))
+
+sns.regplot(
+    x='Physics 1', y='S1 General Average', data=df,
+    scatter_kws={'s': 100, 'color': '#4C72B0', 'edgecolor': 'black', 'alpha': 0.7}, 
+    line_kws={'color': '#D65F5F', 'lw': 2, 'ls': '--', 'alpha': 0.8},
+    ci=None, robust=True
+)
+
+plt.title('Physics 1 vs S1 General Average', fontsize=18, fontweight='bold', color='#333333')
+plt.xlabel('Physics 1 Marks', fontsize=14, color='#555555')
+plt.ylabel('S1 General Average', fontsize=14, color='#555555')
+
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.xticks(fontsize=12, color='#555555')
+plt.yticks(fontsize=12, color='#555555')
+
+plt.tight_layout()
+plt.savefig("Physics_Vs_Average.png")
 plt.show()
 
