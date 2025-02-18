@@ -3,9 +3,9 @@
 
 ## Project Overview
 
-This small project analyzes the academic performance of first-year enp students. The dataset includes grades for several subjects and aims to identify trends, correlations, and provide valuable insights to improve the students' academic outcomes.
+This small project analyzes the academic performance of first-year ENP students. The dataset includes grades for several subjects and aims to identify trends, correlations, and provide valuable insights to improve the students' academic outcomes.
 
-Data was given in pdf format, therefore it was necessary to convert it to a format that python modules can read and execute on(csv)...During this process there was data loss, I minimized its impact by replacing the empty values with the mean calculated from available values. though, the data loss wasn't huge compared to the available data size.
+Data was given in PDF format, therefore it was necessary to convert it to a format that Python modules can read and execute on (CSV). During this process, there was data loss, but I minimized its impact by replacing the empty values with the mean calculated from the available values. Though, the data loss wasn't huge compared to the available data size.
 
 ### Objective:
 - Analyze student performance data.
@@ -105,6 +105,13 @@ Histograms were plotted for each subject to show the distribution of student mar
 
 - **S1 General Average Distribution:**
 ![S1 General Average Distribution](s1_general_average_distribution_modern.png)
+
+---
+
+### 5. Physics 1 vs S1 General Average
+The relationship between **Physics 1** and **S1 General Average** was explored using a scatter plot with a regression line. The analysis shows a strong linear correlation between the two, indicating that better performance in Physics 1 tends to result in a higher S1 General Average.
+
+![Physics 1 vs S1 General Average](Physics_Vs_Average.png)
 
 ---
 
